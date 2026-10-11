@@ -1,8 +1,12 @@
 {
-    "name": "sonicaura-mcp",
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+    "name": "io.github.warmcoding/sonicaura-mcp",
     "description": "Remote MCP server for audio stem separation, denoise, and reverb.",
-    "repository": "https://github.com/warmcoding/sonicaura-mcp",
-    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/warmcoding/sonicaura-mcp",
+        "source": "github"
+    },
+    "version": "1.0.0",
     "remotes": [
         {
             "type": "streamable-http",
