@@ -13,6 +13,36 @@
             "url": "https://api.sonicaurastudio.com/mcp"
         }
     ],
+    "tools": [
+        {
+            "name": "list_audio_tools",
+            "description": "List available audio processing task types and their metadata."
+        },
+        {
+            "name": "check_service_status",
+            "description": "Check if the audio service is available and confirm remaining credits."
+        },
+        {
+            "name": "get_upload_url",
+            "description": "Get a presigned URL to upload an audio file larger than 1 MB."
+        },
+        {
+            "name": "upload_audio",
+            "description": "Upload a small audio file (under 1 MB) via base64 encoding."
+        },
+        {
+            "name": "process_audio",
+            "description": "Submit an audio task. task_type: music_denoise | denoise | reverb | 2stems | 4stems | 6stems."
+        },
+        {
+            "name": "check_task_status",
+            "description": "Poll the status of a task started by process_audio."
+        },
+        {
+            "name": "get_my_credits",
+            "description": "Check the current user's remaining credits."
+        }
+    ],
     "homepage": "https://www.sonicaurastudio.com",
     "keywords": [
         "audio",
