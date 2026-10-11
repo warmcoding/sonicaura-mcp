@@ -62,6 +62,8 @@ Then ask your client things like:
 
 Processing uses credits. Get an account and credits at https://www.sonicaurastudio.com
 
+Listed on [Smithery](https://smithery.ai/server/warmcoding/sonicaura-mcp).
+
 ## License
 
 MIT
