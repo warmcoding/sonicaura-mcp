@@ -1,4 +1,7 @@
 ![SonicAura Logo](icon.svg)
+
+[![Smithery](https://smithery.ai/badge/@warmcoding/sonicaura-mcp)](https://smithery.ai/server/@warmcoding/sonicaura-mcp)
+
 # sonicaura-mcp
 
 Remote MCP server for audio stem separation, denoise, and reverb.
@@ -62,7 +65,6 @@ Then ask your client things like:
 
 Processing uses credits. Get an account and credits at https://www.sonicaurastudio.com
 
-Listed on [Smithery](https://smithery.ai/server/warmcoding/sonicaura-mcp).
 
 ## License
 
