@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "audio-process": {
+            "type": "http",
+            "url": "https://api.sonicaurastudio.com/mcp"
+        }
+    }
+}
