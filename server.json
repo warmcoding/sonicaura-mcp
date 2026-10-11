@@ -3,22 +3,11 @@
     "description": "Remote MCP server for audio stem separation, denoise, and reverb.",
     "repository": "https://github.com/warmcoding/sonicaura-mcp",
     "license": "MIT",
-    "remote": {
-        "url": "https://api.sonicaurastudio.com/mcp",
-        "transport": "http"
-    },
-    "auth": {
-        "type": "oauth2",
-        "resource_metadata": "https://api.sonicaurastudio.com/.well-known/oauth-protected-resource"
-    },
-    "tools": [
-        "list_audio_tools",
-        "check_service_status",
-        "get_upload_url",
-        "upload_audio",
-        "process_audio",
-        "check_task_status",
-        "get_my_credits"
+    "remotes": [
+        {
+            "type": "streamable-http",
+            "url": "https://api.sonicaurastudio.com/mcp"
+        }
     ],
     "homepage": "https://www.sonicaurastudio.com",
     "keywords": [
