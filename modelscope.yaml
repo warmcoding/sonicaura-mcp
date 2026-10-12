@@ -1,5 +1,5 @@
 name: sonicaura-mcp
-version: 1.0.2
+version: 1.0.3
 description: Remote MCP server for audio stem separation, denoise, and reverb
 description_zh: 提供音频音轨分离、降噪和混响处理的远程 MCP 服务
 
@@ -22,6 +22,8 @@ tools:
     description: Base64 upload for files under 1 MB
   - name: process_audio
     description: Submit an audio processing task
+  - name: extract_vocals
+    description: Extract vocals from a song — shortcut for process_audio with task_type='2stems'
   - name: check_task_status
     description: Poll the status of a submitted task
   - name: get_my_credits

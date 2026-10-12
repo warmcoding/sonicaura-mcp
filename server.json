@@ -6,7 +6,7 @@
         "url": "https://github.com/warmcoding/sonicaura-mcp",
         "source": "github"
     },
-    "version": "1.0.2",
+    "version": "1.0.3",
     "remotes": [
         {
             "type": "streamable-http",
@@ -35,6 +35,10 @@
             "description": "Submit an audio task. task_type: music_denoise | denoise | reverb | 2stems | 4stems | 6stems."
         },
         {
+            "name": "extract_vocals",
+            "description": "Extract vocals from a song — shortcut for process_audio with task_type='2stems'. Returns the isolated vocals and the instrumental."
+        },
+        {
             "name": "check_task_status",
             "description": "Poll the status of a task started by process_audio."
         },
@@ -49,6 +53,9 @@
         "stem-separation",
         "denoise",
         "reverb",
+        "vocal-remover",
+        "acapella",
+        "karaoke",
         "mcp",
         "demucs"
     ]
