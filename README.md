@@ -1,6 +1,6 @@
 <img src="icon.svg" alt="SonicAura Logo" width="64" />
 
-[![Smithery](https://smithery.ai/badge/@warmcoding/sonicaura-mcp)](https://smithery.ai/server/@warmcoding/sonicaura-mcp)
+[Smithery](https://smithery.ai/server/@warmcoding/sonicaura-mcp)
 
 # sonicaura-mcp
 
