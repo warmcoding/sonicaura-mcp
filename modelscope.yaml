@@ -1,0 +1,41 @@
+name: sonicaura-mcp
+version: 1.0.2
+description: Remote MCP server for audio stem separation, denoise, and reverb
+description_zh: 提供音频音轨分离、降噪和混响处理的远程 MCP 服务
+
+mcp:
+  name: sonicaura-mcp
+  transport:
+    - streamable-http
+  url: https://api.sonicaurastudio.com/mcp
+  auth:
+    type: oauth2
+
+tools:
+  - name: list_audio_tools
+    description: List available task types and metadata
+  - name: check_service_status
+    description: Confirm service availability and credits
+  - name: get_upload_url
+    description: Presigned URL for files larger than 1 MB
+  - name: upload_audio
+    description: Base64 upload for files under 1 MB
+  - name: process_audio
+    description: Submit an audio processing task
+  - name: check_task_status
+    description: Poll the status of a submitted task
+  - name: get_my_credits
+    description: Check remaining processing credits
+
+tags:
+  - audio
+  - audio-processing
+  - denoise
+  - reverb
+  - stem-separation
+  - mcp
+  - 音频处理
+
+metadata:
+  license: MIT
+  repository: https://github.com/warmcoding/sonicaura-mcp
