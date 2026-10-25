@@ -1,12 +1,12 @@
 {
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "io.github.warmcoding/sonicaura-mcp",
-    "description": "Remote MCP server for audio stem separation, denoise, and reverb.",
+    "description": "Remote MCP server for audio stem separation, denoise, reverb, and MIDI export.",
     "repository": {
         "url": "https://github.com/warmcoding/sonicaura-mcp",
         "source": "github"
     },
-    "version": "1.0.3",
+    "version": "1.1.0",
     "remotes": [
         {
             "type": "streamable-http",
@@ -15,36 +15,56 @@
     ],
     "tools": [
         {
-            "name": "list_audio_tools",
-            "description": "List available audio processing task types and their metadata."
-        },
-        {
-            "name": "check_service_status",
-            "description": "Check if the audio service is available and confirm remaining credits."
-        },
-        {
             "name": "get_upload_url",
-            "description": "Get a presigned URL to upload an audio file larger than 1 MB."
-        },
-        {
-            "name": "upload_audio",
-            "description": "Upload a small audio file (under 1 MB) via base64 encoding."
-        },
-        {
-            "name": "process_audio",
-            "description": "Submit an audio task. task_type: music_denoise | denoise | reverb | 2stems | 4stems | 6stems."
+            "description": "Get a presigned URL to upload an audio file directly to cloud storage."
         },
         {
             "name": "extract_vocals",
-            "description": "Extract vocals from a song — shortcut for process_audio with task_type='2stems'. Returns the isolated vocals and the instrumental."
+            "description": "2 Stems separation: Split track into isolated Vocals and Instrumental (Karaoke)."
+        },
+        {
+            "name": "split_4stems",
+            "description": "4 Stems separation: Split into Vocals, Drums, Bass, Other."
+        },
+        {
+            "name": "split_6stems",
+            "description": "6 Stems separation: Split into Vocals, Guitar, Piano, Bass, Drums, Other."
+        },
+        {
+            "name": "extract_single_instrument",
+            "description": "Quick Splitter: Isolate any single instrument (guitar, piano, bass, drums, vocals) instantly."
+        },
+        {
+            "name": "extract_chords",
+            "description": "AI Chord Recognition: Detect chord progression from the track."
+        },
+        {
+            "name": "export_midi",
+            "description": "AI MIDI Export: Convert a specific isolated instrument into an editable MIDI file."
+        },
+        {
+            "name": "denoise_audio",
+            "description": "AI Sound Denoise: Remove hiss/hum. Use mode='music' or mode='speech'."
+        },
+        {
+            "name": "apply_reverb",
+            "description": "AI Sound Reverb: Add spatial reverb. Presets: vocal_booth, studio_room, bathroom, concert_hall, church."
         },
         {
             "name": "check_task_status",
-            "description": "Poll the status of a task started by process_audio."
+            "description": "Check the status of a task. Just pass task_id. It auto-detects all generated tracks, MIDI, and chords."
+        },
+        {
+            "name": "list_audio_tools",
+            "description": "List all audio processing capabilities offered by SonicAura."
         },
         {
             "name": "get_my_credits",
             "description": "Check the current user's remaining credits."
+        },
+        {
+            "name": "check_service_status",
+            "description": "Check if the SonicAura audio service is currently available."
         }
     ],
     "homepage": "https://www.sonicaurastudio.com",
@@ -54,8 +74,8 @@
         "denoise",
         "reverb",
         "vocal-remover",
-        "acapella",
-        "karaoke",
+        "midi",
+        "chord",
         "mcp",
         "demucs"
     ]

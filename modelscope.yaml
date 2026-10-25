@@ -1,7 +1,7 @@
 name: sonicaura-mcp
-version: 1.0.3
-description: Remote MCP server for audio stem separation, denoise, and reverb
-description_zh: 提供音频音轨分离、降噪和混响处理的远程 MCP 服务
+version: 1.1.0
+description: Remote MCP server for audio stem separation, denoise, reverb, and MIDI export
+description_zh: 提供音频音轨分离、降噪、混响及 MIDI 导出的远程 MCP 服务
 
 mcp:
   name: sonicaura-mcp
@@ -12,22 +12,36 @@ mcp:
     type: oauth2
 
 tools:
-  - name: list_audio_tools
-    description: List available task types and metadata
-  - name: check_service_status
-    description: Confirm service availability and credits
   - name: get_upload_url
-    description: Presigned URL for files larger than 1 MB
-  - name: upload_audio
-    description: Base64 upload for files under 1 MB
-  - name: process_audio
-    description: Submit an audio processing task
+    description: Get a presigned URL to upload large audio files directly to cloud storage.
+  
+  # Audio Processing Tools (1:1 UI Mapping)
   - name: extract_vocals
-    description: Extract vocals from a song — shortcut for process_audio with task_type='2stems'
+    description: 2 Stems separation (Karaoke) - extract vocals and instrumental.
+  - name: split_4stems
+    description: 4 Stems separation - vocals, drums, bass, other.
+  - name: split_6stems
+    description: 6 Stems separation - vocals, guitar, piano, bass, drums, other.
+  - name: extract_single_instrument
+    description: Quick Splitter - isolate any single instrument (guitar, piano, bass, drums).
+  - name: extract_chords
+    description: AI Chord Recognition - detect chord progression.
+  - name: export_midi
+    description: Convert an isolated instrument into an editable MIDI file.
+  - name: denoise_audio
+    description: Remove noise (speech or music) while preserving quality.
+  - name: apply_reverb
+    description: Add spatial reverb with presets (vocal_booth, studio_room, church, etc).
+
+  # Utilities
   - name: check_task_status
-    description: Poll the status of a submitted task
+    description: Poll the status of a task using only the task_id. Auto-detects all output files.
+  - name: list_audio_tools
+    description: List all available audio processing capabilities.
   - name: get_my_credits
-    description: Check remaining processing credits
+    description: Check remaining processing credits.
+  - name: check_service_status
+    description: Check if the audio service is currently available.
 
 tags:
   - audio
@@ -35,6 +49,8 @@ tags:
   - denoise
   - reverb
   - stem-separation
+  - midi-export
+  - chord-recognition
   - mcp
   - 音频处理
 
