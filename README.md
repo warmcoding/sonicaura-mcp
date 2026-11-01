@@ -1,28 +1,29 @@
-<img src="icon.svg" alt="SonicAura Logo" width="64" />
+<div align="center">
+  <img src="icon.svg" alt="Sonicaura Logo" width="64" />
+  <h1>Sonicaura MCP</h1>
+  <p><strong>Remote MCP server for audio stem separation, denoise, reverb, and MIDI export.</strong></p>
 
-[Smithery](https://smithery.ai/server/@warmcoding/sonicaura-mcp)
+  [![Official MCP Registry](https://img.shields.io/badge/MCP_Registry-Official-blue)](https://registry.modelcontextprotocol.io/v0/servers?search=sonicaura-mcp)
+  [![Smithery](https://img.shields.io/badge/Smithery-Listed-purple)](https://smithery.ai/server/@warmcoding/sonicaura-mcp)
+</div>
 
-# sonicaura-mcp
 
-Remote MCP server for audio stem separation, denoise, reverb, and MIDI export.
+Sonicaura processes audio using GPU-accelerated AI. It exposes atomic, 1-to-1 semantic tools optimized for LLM reasoning.
 
-## What it does
-
-SonicAura processes audio using GPU-accelerated AI. It exposes **atomic, 1-to-1 semantic tools** optimized for LLM reasoning:
+## Features
 
 - **Stem Separation** — split a track into 2, 4, or 6 stems
 - **Quick Splitter** — isolate any single instrument (guitar, piano, bass, drums)
 - **Chord Recognition** — detect chord progressions from the track
 - **MIDI Export** — convert isolated instruments into editable MIDI files
 - **Denoise** — remove noise from music or aggressively clean up speech
-- **Reverb** — add spatial reverb with presets: `vocal_booth`, `studio_room`, `bathroom`, `concert_hall`, `church`
+- **Reverb** — add spatial reverb with presets: vocal_booth, studio_room, bathroom, concert_hall, church
 
 ## Endpoint
 
-    https://api.sonicaurastudio.com/mcp
-
-Transport: `http` (Streamable HTTP)
-Auth: OAuth 2.0
+- **URL**: `https://api.sonicaurastudio.com/mcp`
+- **Transport**: http (Streamable HTTP)
+- **Auth**: OAuth 2.0
 
 ## Tools
 
@@ -44,18 +45,18 @@ Auth: OAuth 2.0
 
 ## Usage
 
-Add the server to your MCP client config:
+Add the server to your MCP client config (Cursor, Claude Desktop, VS Code, etc.):
 
-    {
-      "mcpServers": {
-        "audio-process": {
-          "type": "http",
-          "url": "https://api.sonicaurastudio.com/mcp"
-        }
-      }
+{
+  "mcpServers": {
+    "sonicaura": {
+      "type": "http",
+      "url": "https://api.sonicaurastudio.com/mcp"
     }
+  }
+}
 
-Then ask your client things like:
+Then ask your AI client things like:
 
 - "Extract the vocals from this song"
 - "Split this track into 6 stems"
@@ -68,12 +69,12 @@ Then ask your client things like:
 
 Prefer a visual interface? Use the same engine from the browser:
 
-- **Vocal Remover & Karaoke** — https://www.sonicaurastudio.com/tools/ai-vocal
-- **Multitrack Splitter (2/4/6 stems)** — https://www.sonicaurastudio.com/tools/vocal-separation
+- [Vocal Remover & Karaoke](https://www.sonicaurastudio.com/tools/ai-vocal)
+- [Multitrack Splitter (2/4/6 stems)](https://www.sonicaurastudio.com/tools/vocal-separation)
 
-## Credits
+## Credits & Pricing
 
-Processing uses credits. Get an account and credits at https://www.sonicaurastudio.com
+Processing uses credits. Get an account and credits at [sonicaurastudio.com](https://www.sonicaurastudio.com)
 
 ## License
 
