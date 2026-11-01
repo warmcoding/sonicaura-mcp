@@ -1,11 +1,19 @@
 {
-    "name": "sonicaura-mcp",
-    "description": "Audio processing tools for AI agents.",
-    "version": "1.1.1",
-    "mcp_servers": {
+    "schema_version": "v1",
+    "name_for_human": "Sonicaura MCP",
+    "name_for_model": "sonicaura_mcp",
+    "description_for_human": "Audio stem separation, denoise, reverb, and MIDI export for AI agents.",
+    "description_for_model": "Provides tools to process audio files: extract vocals, split stems, denoise audio, add reverb, and export MIDI.",
+    "auth": {
+        "type": "none"
+    },
+    "logo_url": "https://cdn.sonicauraudio.com/videos/vscode/vscode.png",
+    "contact_email": "support@sonicauraudio.com",
+    "legal_info_url": "https://www.sonicauraudio.com",
+    "mcpServers": {
         "sonicaura": {
-            "url": "https://api.sonicaurastudio.com/mcp",
-            "transport": "http"
+            "url": "https://api.sonicauraudio.com/mcp",
+            "transport": "streamable-http"
         }
     }
 }
